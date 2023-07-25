@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 4</h2>
+   <h3>Дано масив номерів авто. 
+      Сформувати новий масив тих, які починаються на «А»</h3>
+   <script>
+   "use strict"
+         let arr = ["АА1111АА","НЕ1131AA","АВ1111КТ","ОО1771ТА","АК8888РЕ"]
+         document.write(`Наш масив [${arr}] <br><br>`)
+            let resultArr = arr.filter(el => 
+               (el[0] === "А" )
+            )
+         document.write(resultArr)
+   </script>
+   </main>
+</body>
+</html>
