@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 3</h2>
+   <h3>Дано послідовність цін товарів та назв (у окремих масивах).
+      Вивести на екран ті, які може собі дозволити користувач
+      (кількість грошей задається).</h3>
+   <script>
+   "use strict";
+            const userMoney = parseFloat(
+               prompt("Яку суму грошей ви маєте?", 500)
+            );
+            const productsPrices = [20, 100, 55, 600, 89, 452, 7, 1600];
+            const productsNames = [
+               "Сухарики",
+               "Сир твердий 300г",
+               "Сік 1л",
+               "Вино напівсухе Нова Зеландія",
+               "Шоколадка",
+               "Іграшка дитяча",
+               "Сірники",
+               "Віскі",
+            ];
+            function getArraOfPositiont(
+               userMoney,
+               productsPrices,
+               productsNames
+            ) {
+               let products = [];
+               productsPrices.forEach((element, index) => {
+                  if (element <= userMoney) products.push(productsNames[index]);
+               });
+               return products;
+            }
+            document.write(
+               `Список продуктів які ви можете купити - ${getArraOfPositiont(
+                  userMoney,
+                  productsPrices,
+                  productsNames
+            )}
+            `
+            );
+   </script>
+   </main>
+</body>
+</html>

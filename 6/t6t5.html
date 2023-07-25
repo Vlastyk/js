@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 5</h2>
+   <h3> Морський бій. Користувач вводить кількість клітинок
+      одновимірного масиву та кількість одиночних кораблів. Комп’ютер
+      довільно розміщує ці одиночні кораблі у масиві по один у
+      клітинці (якщо у клітинці 0, то клітинка пуста, якщо 1 – то це
+      означає, що там є корабель. Користувач вводить номер клітинки,
+      куди стріляє. Гра продовжується до тих пір, поки не будуть
+      потоплені усі кораблі.</h3>
+   <script>
+   "use strict";
+            let shipNumber = parseInt(prompt("Кількість кораблів"));
+            let cellNumber = parseInt(prompt("Кількість клітинок"));
+            function getGameTable(shipNumber, cellNumber) {
+               let gameTable = [];
+               for (let i = 0; i < cellNumber; i++) {
+                  gameTable.push(0);
+               }
+               for (let ship = 0; ship < shipNumber; ) {
+                  let randIndex = Math.floor(Math.random() * cellNumber);
+                  if (gameTable[randIndex] === 0) {
+                  gameTable[randIndex] = 1;
+                  ship++;
+                  }
+               }
+               return gameTable;
+            }
+            function playGame(shipNumber, gameTable) {
+               do {
+                  let userIndex = parseInt(
+                  prompt("Введіть індекс клітинки куди стрілєте")
+                  );
+                  if (gameTable[userIndex] === 1) {
+                  alert("Влучив");
+                  gameTable[userIndex] = 0;
+                  shipNumber--;
+                  } else alert("Промах");
+               } while (shipNumber > 0);
+            }
+            let gameTable = getGameTable(shipNumber, cellNumber);
+            playGame(shipNumber, gameTable);
+   </script>
+   </main>
+</body>
+</html>

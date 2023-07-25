@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 1</h2>
+   <h3>Дано масив, який містить оцінки з К предметів. Знайти середній
+      бал і з’ясувати до якої категорії він відноситься (відмінник,
+      двійочник (має хоча би одну двійку), хорошист (оцінки добре і
+      відмінно), трійочник(є хоча би одна трійка)).</h3>
+   <script>
+   "use strict";
+      let howManyMarks = parseInt(prompt("Введіть кількість оцінок"));
+      function createArr(arrLenght) {
+      let arr = [];
+      for (let i = 0; i < arrLenght; i++) {
+      let randomMark = 2 + Math.floor(Math.random() * 4);
+      arr.push(randomMark);
+            }
+            return arr;
+            }
+            function minValueOfArr(arr) {
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+            if (min > arr[i]) min = arr[i];
+            }
+            return min;
+            }
+            function getResult(minValue) {
+            let result;
+            switch (minValue) {
+            case 2:
+            result = "Двійочник";
+            break;
+            case 3:
+            result = "Трійочник";
+            break;
+            case 4:
+            result = "Хорошист";
+            break;
+            case 5:
+            result = "Відмінник";
+            break;
+            default:
+            throw new Error("Некоректна оцінка");
+            break;
+            }
+            return result;
+            }
+            let marks = createArr(howManyMarks);
+            let minValue = minValueOfArr(marks);
+            alert(getResult(minValue));
+   </script>
+   </main>
+</body>
+</html>

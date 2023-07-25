@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 2</h2>
+   <h3> Дано масив імен учнів. З’ясувати скільки разів зустрічається
+      ім’я «Іван».</h3>
+   <script>
+   "use strict";
+            const studentsNames = [
+               "Іван",
+               "Степан",
+               "Кирило",
+               "Галина",
+               "Наталія",
+               "Іван",
+               "Богдан",
+               "Злата",
+               "Арсен",
+               "Джульєта",
+            ];
+              //----------------- forEach -------------------
+            let summ = 0;
+            studentNames.forEach((name) => {
+               if (name === "Іван") summ++;
+            });
+              //----------------- for of -------------------
+            function getNumOfNames(arr) {
+               let summ = 0;
+               for (const item of arr) {
+                  if (item === "Іван") summ++;
+               }
+               return summ;
+            }
+            document.write(` Наш масив - ${studentsNames} <br>`);
+            document.write(`ім’я «Іван» зустрічається ${summ} разів <br>`);
+            document.write(
+               `ім’я «Іван» зустрічається ${getNumOfNames(studentsNames)} разів`
+            );
+   </script>
+   </main>
+</body>
+</html>

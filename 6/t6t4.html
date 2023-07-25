@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 4</h2>
+   <h3>  Дано одновимірний масив, у якому зберігається певна виграшна
+      сума (елементи заповнюються випадковим чином значеннями від -500
+      до 500). Надаючи користувачу можливість вибирати номери
+      елементів (поки він не відмовиться). Знаходити сумарний виграш.</h3>
+   <script>
+   "use strict";
+            let arr = [];
+            for (let i = 0; i < 20; i++) {
+                let randomWinSumm = -500 + Math.floor(Math.random() * 1001);
+               arr.push(randomWinSumm);
+            }
+            let userNum = parseInt(
+               prompt("Введіть номер білета від 1 до 20")
+            );
+            let total = 0;
+            while (userNum) {
+               total += arr[userNum - 1];
+               alert(
+                  `Під номером ${userNum} виграш = ${
+                  arr[userNum - 1]
+                  }. Загальна сума на рахунку = ${total}`
+               );
+               userNum = parseInt(prompt("Введіть номер білета від 1 до 20"));
+            }
+            document.write(`Загальна сума на рахунку = ${total}$`);
+   </script>
+   </main>
+</body>
+</html>
