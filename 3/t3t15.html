@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task15</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 15</h2>
+   <h3>Користувача поступово вводить показники температури протягом року. Знайти середню температуру.</h3>
+   <script>
+    //1.Вводимо необхідні дані    		
+
+   let result = 0
+   let total = 0
+   let tempPerMonth
+    //2.Розв"язок задачі
+   for (let i = 1; i <= 12; i++) {
+      tempPerMonth = parseFloat(prompt(`Показники температури за ${i} місяць`))
+      total += tempPerMonth
+   }
+    //3.Виводимо результат
+   alert(`Середня тепмература за рік складає${(total / 12).toFixed(1)}`)
+   </script>
+   </main>
+</body>
+</html>

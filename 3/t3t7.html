@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task7</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 7</h2>
+   <h3>Вивести на екран N абзаців (N вводиться користувачем)</h3>
+   <script>
+"use strict"
+      const paragraphsWrapper = document.querySelector('.hw-block')
+      const paragraphsQuantity = parseInt(prompt('Введіть кількість параграфів'))
+      for ( let i = 1; i <= paragraphsQuantity; i++ ) {
+      paragraphsWrapper.innerHTML += `<p>Параграф №${i}</p>` 
+      }
+   </script>
+   </main>
+</body>
+</html>

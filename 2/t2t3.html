@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task3</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача</h2>
+   <h3>З клавіатури вводиться вік людини.
+      Вивести на екран ким він є (дитиною у садочку,
+      школярем, студентом, працівником, пенсіонером).</h3>
+   <script>
+"use strict"
+					
+					let userAge = parseInt(prompt(`Введіть Ваш будь ласка скільки вам років`))
+
+					switch (true) {
+						case userAge >= 0 && userAge <= 3: 
+							alert(`Ви ще навіть для садочка маленький`)
+							break;
+
+							case userAge >= 4 && userAge <= 6:
+							alert(`Ви дитина у садочку`)
+							break;
+
+							case userAge >= 7 && userAge <= 17:
+							alert(`Ви школяр`)
+							break;
+
+							case userAge >= 18 && userAge <= 23:
+							alert(`Ви студент`)
+							break;
+
+							case userAge >= 24 && userAge <= 65:
+							alert(`Ви працівник`)
+							break;
+							case userAge >= 66 && userAge <= 105:
+							alert(`Ви пенсіонер`)
+							break;
+							case userAge > 101:
+							alert(`Ви Граф Дракула`)
+							break;
+					}
+   </script>
+   </main>
+</body>
+</html>

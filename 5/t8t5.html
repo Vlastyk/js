@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task5</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 5</h2>
+   <h3>Створити окремі функції, які переводять:
+      Сантиметри у дюйми;
+      Кілограми у фунти;
+      Кілометри у милі.</h3>
+   <script>
+   function getShowBanner(imagePath, title, link) {
+   let banner = `<a href="${link}"><img src="${imagePath}"></a><h2>${title}</h2>`;
+   return banner;
+   }
+   let bannerOutput = getShowBanner(
+   "../img4.jpg",
+   "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+   );
+   document.write(bannerOutput);
+   </script>
+   </main>
+</body>
+</html>

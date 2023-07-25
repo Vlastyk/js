@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task0</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача</h2>
+   <h3>З клавіатури вводяться імена двох дітей та кількість у них цукерок. 
+      Вивести нa екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.</h3>
+   <script>
+"use strict"
+
+let firstUserName = prompt("Введіть ім'я першої дитини")
+let firstUserCandy = parseInt(prompt("Введіть кількість цукерок у першої дитини")) 
+let secondUserName = prompt("Введіть ім'я другої дитини")
+let secondUserCandy = parseInt(prompt("Введіть кількість цукерок у другої дитини"))
+
+if(firstUserCandy > secondUserCandy)
+   document.write(`Перемагає ${firstUserName}, дитина має ${firstUserCandy} цукерок`)
+   else if(firstUserCandy < secondUserCandy)
+   document.write(`Перемагає ${secondUserName}, дитина має ${secondUserCandy} цукерок`)
+   else if(firstUserCandy === secondUserCandy)
+   document.write(`Перемагає дружба, бо діти мають однакову кількість цукерок - ${secondUserCandy}`)
+   else
+   document.write(`Введені не некоректні данні, оновіть сторінку та спробуйте ще раз)`)
+   </script>
+   </main>
+</body>
+</html>

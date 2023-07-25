@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 0</h2>
+   <h3>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</h3>
+   <script>
+	function getDayType(day) {
+let result
+switch (day) {
+   case 1:
+   case 2:
+   case 3:
+   case 4:
+   case 5: result = 'Робочий день'
+      break;
+   case 6:
+   case 7: result = 'Вихідний день'
+      break;
+   default: result = 'Немає такого дня'
+      break;
+}
+return result
+}
+let userAnswer = parseInt(prompt('Введіть номер дня'))
+let dayType = getDayType(userAnswer)
+document.write(`Назва даного місяця - ${dayType}`)
+   </script>
+   </main>
+</body>
+</html>

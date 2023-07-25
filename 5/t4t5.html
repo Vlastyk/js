@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task0</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 4</h2>
+   <h3>Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: 
+      кількість парних, кількість додатних, кількість більших за 100.</h3>
+   <script>
+      function getUserNumbers() {
+      let arr = []
+      let someNumber = 0
+      for (let i = 0; i < 3; i++){
+      someNumber = parseInt(prompt(`Введіть число ${i + 1}`))
+      arr.push(someNumber)
+      }
+      return arr
+      }
+      function findNumbers (arrNumbers) {
+      let numberOfOdd = 0
+      let positiveNumbers = 0
+      let moreOneHundredNumbers = 0
+      for (let i = 0; i < arrNumbers.length; i++) {
+      if (arrNumbers[i] % 2 === 0) 
+      numberOfOdd++
+      
+      if (arrNumbers[i] > 0)
+      positiveNumbers++
+      if (arrNumbers[i] > 100)
+      moreOneHundredNumbers++
+      }
+      return alert(`
+      odds numbers = ${numberOfOdd}
+      positive numbers = ${positiveNumbers}
+      more one hundred numbers = ${moreOneHundredNumbers}
+      `)
+      }
+      let arrNumbers = getUserNumbers()
+      findNumbers(arrNumbers)
+   </script>
+   </main>
+</body>
+</html>

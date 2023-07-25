@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 0</h2>
+   <h3>Дано покази температур (довільна кількість). 
+      Розробити функцію, яка дозволить підрахувати кількість від’ємних показів температури.</h3>
+   <script>
+	let arrayOfTemperature = [3, 14, -15, 7, -2, -1, 3, -4, -7, -6, -2, -1, 0, 2, -1, -5, -13, -27, -20, -10, -4, -1, 0, 3, 5, 12, 17, 12, -1, -14]
+   function getMinusTempDays (arr){
+   let daysWithMinusTemp = 0
+   for (let i = 0; i < arrayOfTemperature.length; i++ ){
+   if (arr[i] < 0) daysWithMinusTemp++ 
+   }
+   return alert(`Всього виявлено ${daysWithMinusTemp} днів з мінусовою температурою`)
+   }
+   getMinusTempDays(arrayOfTemperature)
+   </script>
+   </main>
+</body>
+</html>

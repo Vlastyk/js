@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task3</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача</h2>
+   <h3>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</h3>
+   <script>
+"use strict"
+
+let dayOfWeek = parseInt(prompt(`Введіть номер дня тижня.`, `1`))
+let res
+
+switch (dayOfWeek) {
+   case 1:
+      res = `Понеділок`
+      break;
+      case 2:
+      res =`Вівторок`
+      break;
+      case 3:
+      res = `Середа`
+      break;
+      case 4:
+      res = `Четвер`
+      break;
+      case 5:
+      res = `П'ятниця`
+      break;
+      case 6:
+      res = `Субота`
+      break;
+      case 7:
+      res = `Неділя`
+      break;
+   default: res = `Оновіть сторінку та спробуйте обрати цифри от 1 від 7`
+      break;
+}
+   alert(res)
+   </script>
+   </main>
+</body>
+</html>

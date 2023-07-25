@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача</h2>
+   <h3>Випадковим чином генерується число від 1 до 5.
+      Спробуйте вгадати число за 2 спроби.</h3>
+   <script>
+"use strict"
+
+const firstRandomMin = 1;
+const firstRandomMax = 5;
+let randomNumber = firstRandomMin + Math.floor(Math.random() * (firstRandomMax - firstRandomMin + firstRandomMin))
+let firstNumberUsers = parseInt(prompt("Введіть ціле число від 1 до 5"))
+
+if (randomNumber === firstNumberUsers)
+   alert(`Вітаю, ви вгадали число`)
+else {
+   alert(`Не вгадали, спробуйте ще раз)`)
+   firstNumberUsers = parseInt(prompt("Остання спроба, введіть ціле число від 1 до 5"))
+   if (randomNumber === firstNumberUsers)
+   alert(`Вітаю, ви вгадали число`)
+else 
+   alert(`Ви не змогли вгадати число`)
+}
+   </script>
+   </main>
+</body>
+</html>

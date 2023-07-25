@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task0</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 0</h2>
+   <h3>Вивести на екран 8 кнопок з написом “Hello”.</h3>
+   <script>
+"use strict"
+      const button = '<button type="button" class="hw-block__btn btn-colors">Hello</button>'
+      const hwBlock = document.querySelector('.hw-block__buttons')
+      for ( let i = 0; i < 8; i++ ) {
+      hwBlock.innerHTML += button
+      }
+   </script>
+   </main>
+</body>
+</html>

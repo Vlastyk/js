@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task3</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача</h2>
+   <h3>З клавіатури вводиться назва категорії водія
+      (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль).
+      Вивести на екран назву транспортного засобу, яким він може керувати.</h3>
+   <script>
+"use strict"
+					
+					let userDrivingCategory = prompt(`Введіть назву водійської категорії латинецею та з великої літери`, `A B C D E`)
+
+					switch (userDrivingCategory) {
+						case "A":
+							alert(`З категорією "A" - ви можете керувати мотоциклом`)
+							break;
+							case "B":
+							alert(`З категорією "B" - ви можете керувати легковим автомобілем`)
+							break;
+							case "C":
+							alert(`З категорією "C" - ви можете керувати вантажним автомобілем`)
+							break;
+							case "D":
+							alert(`З категорією "D" - ви можете керувати автобусом`)
+							break;
+							case "E":
+							alert(`З категорією "E" - ви можете керувати вантажівкою з напівпричепом`)
+							break;
+						default:alert(`Такої категорії не існує, оновіть сторінку та спробуйте ще раз`)
+							break;
+					}
+   </script>
+   </main>
+</body>
+</html>
