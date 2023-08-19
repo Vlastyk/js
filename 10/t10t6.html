@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task6</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 6</h2>
+   <script>
+          let namesArray = [
+                "Андрій",
+                "Валентина",
+                "Влада",
+                "Георгій",
+                "Анатолій",
+                "Дмитро",
+                "Ольга",
+                "Володимир",
+                "Михайло",
+              ]
+              let sortedList = namesArray.sort(
+                (name1, name2) => name1.length - name2.length
+              )
+              function findIndexByBinarySearch(array, searchElement) {
+                let start = 0
+                let end = array.length - 1
+                while (start <= end) {
+                  let middle = Math.floor((start + end) / 2)
+                  let name = array[middle]
+                  if (name.length === searchElement) return middle
+                  if (name.length < searchElement) start = middle + 1
+                  if (name.length > searchElement) end = middle - 1
+                }
+                return -1
+              }
+              const findIndex = findIndexByBinarySearch(sortedList, 5)
+              if (findIndex !== -1) {
+                document.write(
+                  `Ім'я довжиною 5 символів знаходиться під індексом ${findIndex}`
+                )
+              } else {
+                document.write("Ім'я довжиною 5 символів відсутнє у списку")
+              }
+   </script>
+   </main>
+</body>
+</html>

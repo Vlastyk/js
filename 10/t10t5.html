@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task5</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 5</h2>
+   <script>
+         let namesArray = [
+                "Андрій",
+                "Влада",
+                "Георгій",
+                "Анатолій",
+                "Дмитро",
+                "Ольга",
+                "Володимир",
+                "Михайло",
+              ]
+              function findIndexByBinarySearch(array, searchElement) {
+                let start = 0
+                let end = array.length - 1
+                while (start <= end) {
+                  const middle = Math.floor((start + end) / 2)
+                  if (array[middle] === searchElement) return middle
+                  if (array[middle] < searchElement) start = middle + 1
+                  if (array[middle] > searchElement) end = middle - 1
+                }
+                return -1
+              }
+              // =============================================================================================
+              let initialArray = namesArray.sort()
+              document.write(`Масив імен: ${initialArray}<br>`)
+              const findIndex = findIndexByBinarySearch(initialArray, "Ольга")
+              if (findIndex !== -1) {
+                document.write(
+                  `Ольга входить у список під індексом ${findIndex}`
+                )
+              } else {
+                document.write("Ольга відсутня у списку")
+              }
+   </script>
+   </main>
+</body>
+</html>

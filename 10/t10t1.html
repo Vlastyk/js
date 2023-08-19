@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task1</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 1</h2>
+   <script>
+    function getRandomNumber(minValue = 1, maxValue = 500) {
+                return (
+                  minValue +
+                  Math.floor(Math.random() * (maxValue - minValue + 1))
+                )
+              }
+              function getArray() {
+                const array = []
+                for (let i = 0; i < 30; i++) {
+                  let randomNumber = getRandomNumber()
+                  array.push(randomNumber)
+                }
+                return array
+              }
+              function getBubbleSort(array) {
+                let isSorted
+                let counter = 0
+                do {
+                  isSorted = false
+                  for (let i = 1; i < array.length; i++) {
+                    if (array[i - 1] > array[i]) {
+                      let temp = array[i - 1]
+                      array[i - 1] = array[i]
+                      array[i] = temp
+                      isSorted = true
+                      counter++
+                    }
+                  }
+                } while (isSorted)
+                return counter
+              }
+              let initialArray = getArray()
+              document.write(`Початковий масив: ${initialArray}<br>`)
+              let countOfChanges = getBubbleSort(initialArray)
+              document.write(`Кількість обмінів: ${countOfChanges}`)
+   </script>
+   </main>
+</body>
+</html>
