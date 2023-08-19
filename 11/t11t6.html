@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task6</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 6</h2>
+   <h3></h3>
+   <script>
+    function myFunc(num) {
+            setTimeout(() => {
+                if (num <= 10) {
+                    document.write(`${num} > `)
+                    myFunc(num - 1)
+                }
+            }, 1000)
+        }
+        myFunc(10)
+
+        setTimeout(() =>
+            window.location.href = 'https://www.ukr.net/'
+            , 10200);
+
+   </script>
+   </main>
+</body>
+</html>

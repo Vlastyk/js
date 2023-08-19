@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 2</h2>
+   <h3> Розробити функцію, у яку передають об’єкт (день, місяць, рік).
+       Визначити, який буде рік через N місяців.</h3>
+   <script>
+   
+   let userDate = {
+            day: 22,
+            month: 8,
+            year: 2004,
+        }
+
+        document.write(`Day: ${userDate.day}<br>Month: ${userDate.month}<br>Year: ${userDate.year}<br><br>`)
+
+        function getTargetYear({ month, year }, monthAmount) {
+            return year + Math.floor((month - 1 + monthAmount) / 12)
+        }
+        const monthAmount = 1 + Math.floor(Math.random() * 36)
+        // document.write(monthAmount)
+        let targetYear = getTargetYear(userDate, monthAmount)
+        document.write(`Через ${monthAmount} місяців буде ${targetYear} рік`)
+
+   </script>
+   </main>
+</body>
+</html>

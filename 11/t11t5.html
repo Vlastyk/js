@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task5</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 5</h2>
+   <h3>Тренажер додавання. Кожні 10 секунд користувачу задають 
+      випадковий приклад з додавання двох цифр і робиться перевірка.</h3>
+   <script>
+   let intervalId = setInterval(() => {
+            let firstNum = 1 + Math.floor(Math.random() * 10)
+            let secondNum = 1 + Math.floor(Math.random() * 10)
+            let exercise = firstNum + secondNum
+            let userAnswer = parseInt(prompt(`Який результат виразу ${firstNum} + ${secondNum}`))
+            if (userAnswer === exercise) alert('Correct')
+            else alert('Incorrect')
+        }, 2000)
+        setTimeout(() =>
+            clearInterval(intervalId)
+            , 20000);
+   </script>
+   </main>
+</body>
+</html>

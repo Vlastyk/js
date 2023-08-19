@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task1</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 1</h2>
+      <img src="./imggg.jpg" alt="image">
+   <h3></h3>
+   <script>
+    function getElement10Rec(x) {
+            if (x === 0) return 1
+            else return getElement10Rec(x - 1) + 2 * x
+        }
+        let element10Rec = getElement10Rec(10)
+        document.write(`Рекурсивна функція: ${element10Rec}<br><br>`)
+
+        function getElement10It(x) {
+            let res = 1
+            for (let i = 1; i <= x; i++) {
+                res += 2 * i
+            }
+            return res
+        }
+        let element10It = getElement10It(10)
+        document.write(`Не рекурсивна функція: ${element10It}<br><br>`)
+   </script>
+   </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task2</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 2</h2>
+   <h3>Реалізувати бінарний пошук (розглядали на попередніх уроках) 
+      з використанням рекурсивного алгоритму.</h3>
+   <script>
+    let arr = [8, 2, 7, 2, 3, 6, 1, 9, 5, 14]
+        document.write(`Упорядкований масив: ${arr}<br>`)
+        const searchElement = 3
+        document.write(`Елемент, який шукаємо: ${searchElement}<br>`)
+
+        function binarySearch(arr, searchElement, start, end) {
+
+            while (start <= end) {
+                const middle = Math.floor((start + end) / 2)
+                if (arr[middle] === searchElement) {
+                    return middle
+                }
+                else if (arr[middle] < searchElement) {
+                    return binarySearch(arr, searchElement, middle + 1, end)
+                }
+                else {
+                    return binarySearch(arr, searchElement, start, middle - 1)
+                }
+            }
+            return -1
+        }
+        const searchIndex = binarySearch(arr, searchElement, 0, arr.length - 1)
+        if(searchIndex !== -1)
+        document.write(`Елемент є в масиві під індексом: ${searchIndex}`)
+        else document.write('Елемента в масиві не має')
+   </script>
+   </main>
+</body>
+</html>

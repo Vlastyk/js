@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Task0</title>
+</head>
+<body>
+   <main class="container">
+      <h2>Задача 0</h2>
+   <h3>Реалізувати рекурсивну функцію знаходження степеня числа а</h3>
+   <img src="./imgg.jpg" alt="image">
+   <br>
+   <script>
+    function getPowerOfNum(base, exponent) {
+            if (exponent === 1) return base
+            else return getPowerOfNum(base,  exponent -1) * base
+        }
+        let powerOfNum = getPowerOfNum(6, 3)
+        document.write(`Рекурсивна функція: ${powerOfNum}<br><br>`)
+
+        function getpowerOfNum2(base, exponent) {
+            let power = 1
+            for (let i = 0; i < exponent; i++)
+                power *= base
+            return power
+        }
+        let powerOfNum2 = getpowerOfNum2(6, 3)
+        document.write(`Не рекурсивна функція: ${powerOfNum2}<br><br>`)
+   </script>
+   </main>
+</body>
+</html>
