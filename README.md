@@ -7,3 +7,4 @@ HW7 : https://vlastyk.github.io/js/5/index5.html
 HW8 : https://vlastyk.github.io/js/6/index6.html
 HW9 : https://vlastyk.github.io/js/7/index7.html
 HW10 : https://vlastyk.github.io/js/8/index8.html
+HW12 : https://vlastyk.github.io/js/10/index10.html
